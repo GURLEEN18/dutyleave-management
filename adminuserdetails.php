@@ -11,6 +11,9 @@ else
 {	
 $sql="SELECT * FROM users";
 	$r=mysqli_query($db,$sql);
+	
+	
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,6 +52,18 @@ table{
 </div>
 <h3>Registered Users Details</h3>
 
+
+<form action="displayuserdetails.php" method="post" >
+
+ <input type="text" size="15" name="details" placeholder="User Login Id"/> <br/>
+ 
+<input type="submit" value="Search"/> 
+ 
+
+ </form>
+
+
+
 <br/><br/><br/>
 <table  border='1' cellpadding='6' width="1100px" align="center" >
  <tr style="background-color:#ccc">
@@ -82,7 +97,7 @@ $cnt=1;
 	$cnt++;
 }
 ?>
- 
+</table>
  
 </body>
 </html>
