@@ -30,28 +30,38 @@ $rr=mysqli_query($db,$sqq);
 <html>
 <head>
 <title>Admin Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
 <style>
-body{
-	background-color:#ffffcc;
+
+<?php include('mystyle2.css'); ?>
+button{
+   position:absolute;
+	width:7%;
+	background-color:black;
+	color:white;
+	border: 1px outset grey;
+    border-radius: 4px;
+	padding:  6px 10px;
+	 cursor: pointer;
+	  font-size: 14px;
+	  z-index:1;
 }
-.img{
-	width:300px;
-	float:right;
-}
-table{
-	background-color:white;
+button:hover {
+    background-color:#505050;
 }
 </style>
 </head>
 
 <body>
-<br/>
-<img src="bmscelogonew.png" >
+<a href="adminuserdetails.php" >
+<button type="button" >Go Back</button>
+</a>
+<br/><br/><br/>
+<img src="aditya.png" />
 
 <br/> <br/> 
-<h4> User Details </h4>
-<table  border='1' cellpadding='6' width="1100px" align="center" >
+<h3 style="margin-left:50px;"> User Details </h3>
+<table  border='4' cellpadding='8' width="1100px" align="center" >
  <tr style="background-color:#ccc">
  <th colspan='2'>Login Id</th>
  <th colspan='3'>First Name</th>
@@ -85,9 +95,9 @@ table{
 <br/> <br/>
 <br/>
 
-<h4>Leave Details </h4>
+<h3 style="margin-left:50px;">Leave Details </h3>
 
-<table  border='1' cellpadding='6'  align="center" width="1100px">
+<table  border='4' cellpadding='8'  align="center" width="1100px">
  <tr style="background-color:#ccc">
  <th width="50px">Sl No.</th>
  <th colspan='2'>Leave Type</th>

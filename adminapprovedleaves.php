@@ -16,24 +16,16 @@ $sql="SELECT users.id,users.First_Name,users.Last_Name,users.Loginid,tbleaves.Le
 <html>
 <head>
 <title>Admin Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
 <style>
-body{
-	background-color:#ffffcc;
-}
-table{
-	background-color:white;
-border-color:#ccc;
-   border-style:outset;
-   border-radius:4px;
-   border-width:1px;
-}
+
+<?php include('mystyle2.css'); ?>
 </style>
 </head>
 
 <body>
 <br/>
-<img src="bmscelogonew.png" >
+<img src="aditya.png" >
   
   <div class="topnav">
   <a  href="adminhome.php">Home</a>
@@ -50,7 +42,7 @@ border-color:#ccc;
 <h3>Approved Leaves</h3>
 
 <br/><br/><br/><br/><br/>
-<table  border='1' cellpadding='6' align="center" width="1100px" >
+<table  border='4' cellpadding='8' align="center" width="1100px" >
  <tr style="background-color:#ccc">
  <th width="50px">Sl No.</th>
  <th colspan='2' width="130px">Student Name</th>

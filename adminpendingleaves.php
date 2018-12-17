@@ -16,36 +16,28 @@ $sql="SELECT users.id,users.First_Name,users.Last_Name,users.Loginid,tbleaves.id
 <html>
 <head>
 <title>Admin Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
 <style>
-body{
-	background-color:#ffffcc;
-}
-table{
-	background-color:white;
-	border-color:#ccc;
-   border-style:outset;
-   border-radius:4px;
-   border-width:1px;
-}
+
+<?php include('mystyle2.css'); ?>
 input[type=submit]{
-	width:60%;
+	width:45%;
 	background-color:blue;
 	color:white;
 	border: 1px outset grey;
     border-radius: 4px;
-	padding: 5px 9px;
+	padding: 2px 2px;
 	 cursor: pointer;
 }
 input[type=submit]:hover {
-    background-color: #787878;
+    background-color: #3366cc;
 }
 </style>
 </head>
 
 <body>
 <br/>
-<img src="bmscelogonew.png" >
+<img src="aditya.png" >
   
   <div class="topnav">
   <a  href="adminhome.php">Home</a>
@@ -59,10 +51,10 @@ input[type=submit]:hover {
   
 </div>
 
-<h3>Pending Leaves</h3>
+<h3>PENDING LEAVES</h3>
 
 <br/><br/><br/><br/><br/>
-<table  border='1' cellpadding='5'  align="center" width="1100px">
+<table  border='4' cellpadding='8'  align="center" width="1150px">
  <tr style="background-color:#ccc">
  <th width="65px"> Leave ID</th>
  <th width="150px">Student Name</th>
@@ -72,7 +64,7 @@ input[type=submit]:hover {
  <th  width="80px">To Date</th>
  <th width="150px">Description </th>
  <th >Posting Date</th>
- <th width="150px">Take Action</th>
+ <th width="200px">Take Action</th>
  </tr>
  
  <?php

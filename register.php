@@ -77,14 +77,11 @@ if(isset($_POST['register'])) {
 <html>
 <head>
 <title></title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
+
 <style>
-body{
-background-image:url("1.jpg");
- background-color: #cccccc;
- background-repeat: no-repeat;
-  background-size:cover;
-}
+<?php include('mystyle.css'); ?>
+
 
 input[type=text]{
     background: #f1f1f1;
@@ -132,58 +129,53 @@ input[type=reset]:hover {
     background-color: #45a049;
 }
 
-button{
-	width:15%;
-	background-color:red;
-	color:white;
-	border: 1px outset grey;
-    border-radius: 4px;
-	padding:  13px 22px;
-	 cursor: pointer;
-	  font-size: 14px;
-	  z-index:1;
-}
-button:hover {
-    background-color: #D80000;
-}
+
 </style>
 </head>
 
-<body>
+<body class="body">
+
 <form id="form1" method="post" action="register.php" >
 
+
 <a href="welcomepage.php" >
-<button type="button" id="b6">Return to main page</button>
+<button type="button" class="button">Return to main page</button>
 </a>
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
  
- <table width="650" id="h" align="center" cellpadding="5px" ><tr><th colspan="2" height="5" align="left" class="t1"><?php include('errors.php'); ?><br/><font size="6">Create your account</font><br/><br/></th></tr>
+ <table width="620" id="h" align="center" cellpadding="5px" ><tr><th colspan="2" height="5" align="left" class="t1"><?php include('errors.php'); ?><br/>
+ <font size="6">Create your account</font><br/><br/></th></tr>
 
    <tr><td colspan="2"><br/> 
    <b>Login Id:</b><br/>
-	<input type="text" name="Loginid" id="lid" placeholder="Login Id" size="30" required="required"  value="<?php echo $Loginid; ?>" >
+	<input type="text" name="Loginid" id="lid" placeholder="Login Id" size="30" required="required" value="<?php echo $Loginid; ?>" >
 	<br/><br/></td></tr>
 	
        <tr><td>
 	  <b>First Name:</b><br/>
-	<input type="text" name="First_Name" id="fn" size="30" placeholder="Your first name"  required="required"  value="<?php echo $First_Name; ?>" ><br/><br/></td>
-	
+	<input type="text" name="First_Name" id="fn" size="30" placeholder="Your first name"  required="required" pattern="[A-Za-z.]{1,20}" title="Name should not contain numbers or special characters" 
+	value="<?php echo $First_Name; ?>" ><br/><br/>
+	</td>
 	<td>
 	 <b>Last Name:</b><br/>
-	<input type="text" name="Last_Name" id="ln" size="30" placeholder="Your last name" required="required" value="<?php echo $Last_Name; ?>" ><br/><br/></td></tr>
+	<input type="text" name="Last_Name" id="ln" size="30" placeholder="Your last name" required="required" pattern="[A-Za-z.]{1,20}" title="Name should not contain numbers or special characters"
+	value="<?php echo $Last_Name; ?>" ><br/><br/></td></tr>
 	
 	<tr><td colspan="2"> 
 	<b>Email Id:</b><br/>
-	<input type="email" id="eid" name="Email" size="30" placeholder="Your email id" required="required" maxlength="100" value="<?php echo $Email; ?>" ><br/><br/></td></tr>
+	<input type="email" id="eid" name="Email" size="30" placeholder="Your email id" required="required" maxlength="100" pattern="[a-z0-9._%+-!]+@[a-z0-9.-]+\.[a-z]{2,}$"
+	value="<?php echo $Email; ?>" ><br/><br/></td></tr>
 	
 	<tr><td colspan="2">
 	<b>Phone No.:</b><br/>
-	<input type="text" name="Phone_Number" id="pn"  size="30" placeholder="Enter 10 digit no." required="required" value="<?php echo $Phone_Number; ?>"  ><br/><br/></td></tr>
+	<input type="text" name="Phone_Number" id="pn"  size="30" placeholder="Enter 10 digit no." required="required" pattern="[0-9]{10}" title="Input a 10 digit valid number" 
+	value="<?php echo $Phone_Number; ?>"  ><br/><br/></td></tr>
 	
 	<tr><td>
 	<b>Password:</b><br/>
-	<input type="password" name="password_1"  required="required" id="pwd1" size="30" placeholder="Password"  value="<?php echo $Password1; ?>" ><br/><br/></td>
+	<input type="password" name="password_1"  required="required" id="pwd1" size="30" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+	title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" value="<?php echo $Password1; ?>" ><br/><br/></td>
 	
 	<td>
 	<b>Confirm Password:</b><br/>
@@ -192,13 +184,14 @@ button:hover {
 	<tr><td colspan="2" align="center">
 	<input type="submit" name="register" value="Register">
     <input type="reset" value="Reset"  />
-	<br/>
-	 Already a member? <a href="login.php">Login</a><br/><br/></td></tr>
+	<br/><br/>
+	 Already a member? <a href="login.php">Login</a><br/></td></tr>
 	 </table>
 	
 	
 
 
 </form>
+
 </body>
 </html>

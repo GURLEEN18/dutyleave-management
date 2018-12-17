@@ -23,29 +23,18 @@ $sql="SELECT id FROM users WHERE Loginid='$eid' ";
 <html>
 <head>
 <title>Home Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
 <style>
-body{
-	background-color:#ffffcc;
-}
-table{
-	background-color:white;
-	 border-color:#ccc;
-   border-style:outset;
-   border-radius:9px;
-}
-.img{
-	position:absolute;
-	top:600px;
-	rigth:100px;
-}
+
+<?php include('mystyle2.css'); ?>
+
 </style>
 </head>
 
 
 <body>
 <br/>
-  <img src="bmscelogonew.png" >
+  <img src="aditya.png" >
   
   <div class="topnav">
   <a  href="userhomepage.php">Home</a>

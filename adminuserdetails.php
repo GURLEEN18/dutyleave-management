@@ -19,24 +19,30 @@ $sql="SELECT * FROM users";
 <html>
 <head>
 <title>Admin Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
 <style>
-body{
-	background-color:#ffffcc;
+
+<?php include('mystyle2.css'); ?>
+
+input[type=submit]{
+	width:4%;
+	background-color:blue;
+	color:white;
+	border: 1px outset grey;
+    border-radius: 4px;
+	padding: 2px 2px;
+	 cursor: pointer;
 }
-.img{
-	width:300px;
-	float:right;
+input[type=submit]:hover {
+    background-color: #3366cc;
 }
-table{
-	background-color:white;
-}
+
 </style>
 </head>
 
 <body>
 <br/>
-<img src="bmscelogonew.png" >
+<img src="aditya.png" />
   
   <div class="topnav">
   <a  href="adminhome.php">Home</a>
@@ -54,8 +60,8 @@ table{
 
 
 <form action="displayuserdetails.php" method="post" >
-
- <input type="text" size="15" name="details" placeholder="User Login Id"/> <br/>
+Search for a particular student:
+ <input type="text" size="15" name="details" placeholder="User Login Id"/>
  
 <input type="submit" value="Search"/> 
  
@@ -65,7 +71,7 @@ table{
 
 
 <br/><br/><br/>
-<table  border='1' cellpadding='6' width="1100px" align="center" >
+<table  border='4' cellpadding='8' width="1100px" align="center" >
  <tr style="background-color:#ccc">
  <th>Sl Number</th>
  <th colspan='2'>Login Id</th>

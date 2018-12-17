@@ -68,57 +68,29 @@ else{
 <html>
 <head>
 <title>Leave request</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
+<script>
+function TDate() {
+    var UserDate = document.getElementById("userdate").value;
+    var ToDate = new Date();
+
+    if (new Date(UserDate).getTime() < ToDate.getTime()) {
+          alert("The Date must be Bigger or Equal to today date");
+          return false;
+     }
+    return true;
+}
+</script>
 <style>
-body{
-	background-color:#ffffcc;
-}
-input[type=text]{
-    background: #f1f1f1;
-	border: 1px outset grey;
-    border-radius: 4px;
-	padding: 8px 16px;
-}	
-input[type=text], select{
-	
-	border: 1px outset grey;
-    border-radius: 4px;
-	padding:3px 6px;
-}
-textarea {
-    width: 70%;
-    height: 70px;
-    padding: 6px 10px;
-   
-    border: 1px inset #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-}
-input[type=submit]{
-	width:35%;
-	background-color:green;
-	color:white;
-	border: 1px outset grey;
-    border-radius: 4px;
-	padding: 7px 10px;
-	 cursor: pointer;
-}
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-.img{
-	position:absolute;
-	top:500px;
-	left:50px;
-}
+
+<?php include('mystyle2.css'); ?>
 </style>
 </head>
 
 
 <body>
 <br/>
-  <img src="bmscelogonew.png" >
+  <img src="aditya.png" >
   
   
    <div class="topnav">
@@ -134,7 +106,7 @@ input[type=submit]:hover {
 <form id="leaveform" method="post" action="applyleave.php" name="Apply leave">
 
 
-<img src="" class="img">
+
 <table  class="t" align="center"   width="900">
 <tr>
 <th colspan="2"  bgcolor="yellow" height="45" class="t1"><font size="5">Leave  Request  Form</font></th></tr>
@@ -154,19 +126,19 @@ input[type=submit]:hover {
 </select><br/><br/>
 </td></tr>
 <tr><td class="5"><br/>
-<b>From date: <input type="text" size="10" name="FromDate" placeholder="dd/mm/yyyy" required />
+<b>From date: <input  type="date" size="10" name="FromDate" placeholder="dd/mm/yyyy" id="userdate" onchange="TDate()" required />
 
 
 <br/><br/></td>
 
 <td  class="6">
-<b>To date: <input type="text" size="10" name="ToDate" placeholder="dd/mm/yyyy" required />
+<b>To date: <input type="date" size="10" name="ToDate" placeholder="dd/mm/yyyy" id="userdate" onchange="TDate()" required />
 
 </td></tr>
 
 
 <tr><td class="7" colspan="2"><br/>
-<b>Description:</b><br/><textarea name="Description" rows="4" cols="110">
+<b>Description:</b><br/><textarea name="Description" rows="4" cols="110" >
 
 </textarea><br/><br/>
 
