@@ -16,7 +16,7 @@ $db=mysqli_connect("localhost", "root","","user_registration") or die(mysql_erro
   }
 
   if (count($errors) == 0) {
-  $password = md5($password);
+  $password = $password;
   	$query = "SELECT * FROM admin WHERE Loginid='$Loginid' AND password='$password'";
   	$results = mysqli_query($db,$query);
 	$r=mysqli_fetch_row($results);

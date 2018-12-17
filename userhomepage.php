@@ -17,13 +17,14 @@ else
 <html>
 <head>
 <title>User Home Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
 <style>
-body{
-	background-color:#ffffcc;
-}
-table.z1{
+
+<?php include('mystyle2.css'); ?>
+table{
 	font-size:13pt;
+	border-width:0px;
+	background-color:#ffffcc;
 }
 .img{
 	float:right;
@@ -38,7 +39,7 @@ table.z1{
 
 <body>
 <br/>
-  <img src="bmscelogonew.png" >
+  <img src="aditya.png" >
   <div class="topnav">
   <a class="active" href="userhomepage.php">Home</a>
   <a href="applyleave.php">Leave Request</a>
@@ -48,10 +49,10 @@ table.z1{
 </div>
 <br/>
 <form id="updateform" method="post" action="userhomepage.php">
-<h2><b> User Details </b></h2>
+<h2><b> USER DETAILS </b></h2>
 <img src="download.png" class="img">
 </br></br></br>
-<table width="1100" cellpadding="10" cellspacing="1" align="center"  class="z1">
+<table width="1100" cellpadding="10" cellspacing="1" align="center"  >
 
 
 <tr> 

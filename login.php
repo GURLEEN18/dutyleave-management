@@ -39,58 +39,16 @@ foreach ($results as $result) {
 <html>
 <head>
 <title>Login Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
 <style>
-body{
-background-image:url("5.png");
- background-color: #cccccc;
- background-repeat: no-repeat;
-  background-size:cover;
-  position:relative;
-}
-input[type=text]{
-	border: 1px outset grey;
-    border-radius: 4px;
-	padding: 10px 20px;
-	background: #f1f1f1;
-}
-input[type=password]{
-	border: 1px outset grey;
-    border-radius: 4px;
-	padding: 10px 20px;
-	background: #f1f1f1;
-}
-input[type=submit]{
-	width:100%;
-	background-color:green;
-	color:white;
-	border: 1px outset grey;
-    border-radius: 4px;
-	padding: 10px 20px;
-	 cursor: pointer;
-}
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-button{
-   position:absolute;
-	width:15%;
-	background-color:red;
-	color:white;
-	border: 1px outset grey;
-    border-radius: 4px;
-	padding:  11px 20px;
-	 cursor: pointer;
-	  font-size: 14px;
-	  z-index:1;
-}
-button:hover {
-    background-color: #D80000;
-}
+<?php include('mystyle.css'); ?>
+
+
+
 </style>
 </head>
 
-<body>
+<body class="body">
 
 
 										 
@@ -98,10 +56,10 @@ button:hover {
 
 
 <a href="welcomepage.php" >
-<button type="button">Return to main page</button>
+<button type="button" class="button">Return to main page</button>
 </a>
 <a href="adminlogin.php" >
-<button type="button" style="position:absolute;right:0px;">Admin Login here</button>
+<button type="button" style="position:absolute;right:0px;" class="button">Admin Login here</button>
 </a>
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

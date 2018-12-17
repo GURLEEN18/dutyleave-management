@@ -18,11 +18,10 @@ else
 <html>
 <head>
 <title>Admin Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle.css"></link>
+
 <style>
-body{
-	background-color:#ffffcc;
-}
+
+<?php include('mystyle2.css'); ?>
 .img{
 	width:300px;
 	float:right;
@@ -35,7 +34,7 @@ table{
 
 <body >
 <br/>
-<img src="bmscelogonew.png" >
+<img src="aditya.png" >
   
   <div class="topnav">
   <a class="active" href="adminhome.php">Home</a>

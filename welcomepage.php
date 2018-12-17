@@ -6,30 +6,44 @@ include('server.php')
 ?>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" >
 
 <head>
 <title>Welcome Page</title>
-<link rel="stylesheet" type="text/css" href="mystyle2.css"></link>
+
 <script>
-// When the user scrolls down 20px from the top of the document, show the button
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("myBtn").style.display = "block";
+		document.getElementById("div4").style.top = "0";
     } else {
         document.getElementById("myBtn").style.display = "none";
+		document.getElementById("div4").style.top = "-120px";
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+
 function topFunction() {
-     // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    
+    document.documentElement.scrollTop = 0; 
 }
+
+
 </script>
 <style>
+<?php include('mystyle.css'); ?>
+html{
+	scroll-behavior: smooth;
+}
+body{
+	height:100%;
+	margin:0px;
+	
+}
+
 table{
 border-bottom-width:2px;
 border-bottom-style:solid;
@@ -38,57 +52,8 @@ border-bottom-color:black;
 tr{
 vertical-align:bottom;
 }
-#position0{
-position:absolute;
-top:5px;
-left:0px;
 
-z-index:1;
-}
-#position{
-position:absolute;
-top:200px;
-left:150px;
-font-family:'pacifico',cursive;
-font-size:60px;
-z-index:1;
-}
-#position2{
-position:absolute;
-top:250px;
-left:850px;
-font-family:pacifico;
-font-size:30px;
-z-index:1;
-}
-#position3{
-position:absolute;
-top:50px;
-left:0px;
 
-z-index:1;
-}
-div.b{
-	
-	height:700px;
-	background-image:
-	  url("3.png");
-	background-repeat: no-repeat;
-    background-size:cover;
-    color:#fff;
-	display:flex;
-	justify-content:center;
-    align-items:center;	
-	position:relative;
-}	
-
-div.overlay{
-	width:100%;
-	height:100%;
-	background:#000;
-	opacity:0.3;
-	position:absolute;
-}
 button{
 
 	width:10%;
@@ -120,32 +85,12 @@ button:hover.bz {
     background-color: #D80000;
 }
 
-#size{
-	
-font-size:38px;
-color:yellow;
-font-family:"cooper black";
-}
+
 h2{
 color:blue;
 margin-left:30px;
 }
-.img{
-float:right;
-margin-right:35px;
-border-bottom-style:solid;
-border-top-style:solid;
-border-left-style:solid;
-border-right-style:solid;
-}
-.img2{
-float:right;
-margin-right:35px;
-width=80px;
-}
-#div4{
-	position:fixed;
-}
+
 
 </style>
 </head>
@@ -153,16 +98,16 @@ width=80px;
 <body >
 
 
-<div   class="a" id="div4" style="background-color:#787878;" >
+<div   class="a" id="div4" style="background-color:#A9A9A9;" >
 
   
- <table align="center"  cellpadding="6" width="1500px" >
+ <table align="center"  cellpadding="6" width="1517px" >
  <tr >
- <td align="center"><img src="bmsnewlogo.png" width="100px"></td>
+ <td align="center"><img src="bmsnewlogo.png" width="70px"></td>
  <td width="850px" id="size" align="center"><b>Online  Leave  Portal</b><br/></td></td><td></td><td></td>
  <td><a href="#div0" ><button type="button" class="bz" >Home</button></a><br/><br/>
- <td><a href="#div1" ><button type="button" class="bz" >About Us</button></a><br/><br/></td>
- <td><a href="#div2" ><button type="button" class="bz">leave Management</button><br/><br/></td>
+ <td><a href="#div1" ><button type="button" class="bz" >Leave management</button></a><br/><br/></td>
+ <td><a href="#div2" ><button type="button" class="bz">About Us</button><br/><br/></td>
  <td><a href="#div3" width=""><button type="button" class="bz">Locate Us</button><br/><br/></td><td></td><td></td><td></td><td></td>
  </tr>
  </table>
@@ -175,8 +120,8 @@ width=80px;
   <td align="center"><img src="bmsnewlogo.png" width="100px"></td>
  <td width="850px" id="size" align="center"><b>Online  Leave  Portal</b><br/></td><td></td><td></td>
  <td><a href="#div0" ><button type="button" class="bz">Home</button></a><br/><br/></td>
- <td><a href="#div1" ><button type="button" class="bz">About Us</button></a><br/><br/></td>
- <td><a href="#div2" ><button type="button" class="bz">leave Management</button><br/><br/></td>
+ <td><a href="#div1" ><button type="button" class="bz">Leave management</button></a><br/><br/></td>
+ <td><a href="#div2" ><button type="button" class="bz">About Us</button><br/><br/></td>
  <td><a href="#div3" width=""><button type="button" class="bz">Locate Us</button><br/><br/></td><td></td><td></td><td></td><td></td>
  </tr>
  </table>
@@ -185,6 +130,7 @@ width=80px;
 <p id="position">Welcome to bmsce<br/>
 Leave Portal
 </p>
+<p id="position4">An easy and efficient way for requesting and approving a leave.</p> 
 <p id="position2"><b>Login or sign up to continue</b>
 </p>
 <p >
@@ -202,20 +148,8 @@ Leave Portal
 
 <button onclick="topFunction()" id="myBtn" title="Go to top">Go to Top </button>
 
-<div class="article" id="div1">
-<img src="bmsnewlogo.png" class="img2" width="200px">
-<h2 >About BMSCE</h2>
-<div class="article2" align="justify"><b>
-
-    <p>In the history of Karnataka, the name of late Sri Bhusanayana Mukundadas Sreenivasaiah (BMS) occupies a prominent place in the field of philanthropy. The Maharaja of Mysore honoured him with the title of Raja Karya Prasaktha in 1946.</p>
-    <p>He Stared the B.M.S College of Engineering in the same year.He had foreseen the urgent need for high quality technical education in India even before its independence. The ideals for which Sri B.M. Sreenivasaiah stood continue to inspire the inheritors of his legacy.</p>
-	<p>After the demise of "Sri. B. M. Sreenivasaiah", his dynamic and enterprising son Sri. B. S. Narayan, took over the reigns of the college. The institution grew from strength-to-strength under his able guidance.</p>
-	<p>He was also instrumental in initiating international collaborative programmers such as training foreign students under International Co-operation Division (ICD) and cross cultural programs with Melton Foundation. </p>
- <br/>
- <hr></div></div>
- <div id="div2">
- <br/>
- <h2>Leave Management System</h2>
+<div class="article" id="div1" ><br/><br/><br/>
+<h2>Leave Management System</h2>
  <div class="article2" align="justify" size="18px">
   <p>Opensoft eLeave is an online leave management software developed specifically for SME. The eLeave software enables companies to speed up leave processing and being paperless 
   also helps companies to reduce overheads related to leave processing. With eLeave, employees will apply for leave electronically using any Internet-connected device 
@@ -247,7 +181,20 @@ Leave Portal
   </p>
    <br/>
  <hr>
-  </div></div><br/>
+  </div>
+</div>
+ <div id="div2"><br/><br/><br/>
+ <br/>
+ <img src="bmsnewlogo.png" class="img2" width="200px">
+<h2 >About BMSCE</h2>
+<div class="article2" align="justify"><b>
+
+    <p>In the history of Karnataka, the name of late Sri Bhusanayana Mukundadas Sreenivasaiah (BMS) occupies a prominent place in the field of philanthropy. The Maharaja of Mysore honoured him with the title of Raja Karya Prasaktha in 1946.</p>
+    <p>He Stared the B.M.S College of Engineering in the same year.He had foreseen the urgent need for high quality technical education in India even before its independence. The ideals for which Sri B.M. Sreenivasaiah stood continue to inspire the inheritors of his legacy.</p>
+	<p>After the demise of "Sri. B. M. Sreenivasaiah", his dynamic and enterprising son Sri. B. S. Narayan, took over the reigns of the college. The institution grew from strength-to-strength under his able guidance.</p>
+	<p>He was also instrumental in initiating international collaborative programmers such as training foreign students under International Co-operation Division (ICD) and cross cultural programs with Melton Foundation. </p>
+ <br/></b>
+ <hr></div></div><br/>
   	<div class="article" id="div3">
    <img src="bmsmap.png" width="350px;"  class="img">
   <h2>Locate Us</h2> 
